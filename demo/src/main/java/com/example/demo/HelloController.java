@@ -33,9 +33,9 @@ public class HelloController {
     //add postgre sql driver in project and in maven file
     @FXML
     protected void onAddUserButtonClick(){
-        String url = "jdbc:postgresql://localhost:5432/postgres";
-        String user = "postgres";
-        String password = "elkin";
+        String url = "jdbc:postgresql://localhost:5432/databasename";
+        String user = "user";
+        String password = "password";
 
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement("INSERT INTO users (name, email, country, password) VALUES ( ?, ?, ?, ?)")) {
