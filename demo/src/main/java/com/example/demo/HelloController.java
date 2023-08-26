@@ -39,7 +39,8 @@ public class HelloController {
 
         try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement stmt = conn.prepareStatement("INSERT INTO users (name, email, country, password) VALUES ( ?, ?, ?, ?)")) {
-
+            //Just a example , I will fix it soon . 
+            
             stmt.setString(1, "John Doe"); // Set the value for the "name" column
             stmt.setString(2, "john.doe@example.com"); // Set the value for the "email" column
             stmt.setString(3, "USA"); // Set the value for the "country" column
